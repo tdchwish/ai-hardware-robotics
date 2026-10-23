@@ -10,28 +10,28 @@ Review machine-translated technical claims before relying on them.
 
 ---
 
-> **Preface**: This chapter is the foundational part of the entire ROS2 robot simulation course. Before formally learning ROS2 tools and programming methods, it is necessary to understand the background of robotics—where does it come from? Where is it now? And where is it going? Only by understanding these basics can you comprehend why ROS2 is designed in this way, and why mastering robot simulation skills is so important in today’s era.
+> **Preface**: This chapter is the foundation of the entire ROS2 robot simulation course. Before formally learning ROS2 tools and programming methods, it is necessary to understand the background of robotics—where does it come from? Where is it now? And where is it going? Only by understanding these basics can you comprehend why ROS2 is designed in this way, and why mastering robot simulation skills is so important in today’s era.
 
 ---
 
-## 1. The Origin of Robots
+## 1. Origin of Robots
 
 ### 1.1 From Myth to Machinery—Humanity's Millennium Quest for "Artificial Life"
 
 The dream of humans creating robots can be traced back to myth and legend thousands of years ago.
 
-In Greek mythology, Hephaestus—the god of fire and craftsmanship in Greek legend—is said to have made mechanical servants out of gold that could help him forge metals. This represents the earliest human imagination of "artificial laborers." Similar legends exist in ancient China as well. The "Wooden Ox and Flowing Horse" invented by the Eastern Han scientist Zhang Heng is considered one of the earliest "automatic machines." Although its actual mechanism remains controversial, it reflects the ancients' desire for mechanical devices that could automatically transport goods.
+In Greek mythology, Hephaestus—the god of fire and craftsmanship in Greek legend—is said to have made mechanical maidens out of gold that could help him forge metals. This represents the earliest concept of "artificial laborers" in human history. Similar legends exist in ancient China as well. The "Wooden Ox and Flowing Horse" invented by the Eastern Han scientist Zhang Heng is considered one of the earliest "automatic machines." Although its actual mechanism remains controversial, it reflects the ancients' desire for mechanical devices that could automatically transport goods.
 
-In the Middle Ages, skilled craftsmen in Europe began to turn myths into reality. In 1738, French inventor Jacques de Vaucanson created a "mechanical duck" that could move its wings, eat, and excrete. Although it was merely a delicate toy, this mechanical duck demonstrated the potential of mechanical transmission principles in mimicking biological movements. Later, Swiss watchmakers developed "automatic dolls" that could write, paint, and play musical instruments. These devices were collected by various European courts, becoming symbols of the perfect combination of technology and art at that time.
+In the Middle Ages, skilled craftsmen in Europe began to turn myths into reality. In 1738, French inventor Jacques de Vaucanson created a "mechanical duck" that could move its wings, eat, and excrete. Although it was merely a delicate toy, this mechanical duck demonstrated the potential of mechanical transmission principles in mimicking biological movements. Subsequently, Swiss watchmakers produced "automatic dolls" that could write, paint, and play musical instruments. These devices were collected by various European courts, becoming a symbol of the perfect integration of technology and art at that time.
 
 ### 1.2 The Birth of the Term "Robot"
 
-In 1920, a new term destined to be recorded in history was born.
+In 1920, a new term destined to go into history was born.
 
-The Czech writer Karel Čapek first coined the term "Robot" in his science fiction play *Rossum's Universal Robots* (abbreviated as R.U.R.). In Czech, "robota" means "forced labor" or "hard work." Čapek used it to describe "artificial workers" who can work tirelessly for humans. The play tells the story of a artificial robot that rebels and eliminates humanity, making it one of the earliest literary works that deeply contemplated the potential risks of artificial intelligence.
+The Czech writer Karel Čapek first created the term "Robot" in his science fiction play *Rossum's Universal Robots* (abbreviated as R.U.R.). In Czech, "robota" means "forced labor" or "hard work." Čapek used it to describe "artificial workers" who can work tirelessly for humans. The play tells the story of a artificial robot that rebels and eliminates humans, making it one of the earliest literary works that deeply considered the potential risks of artificial intelligence.
 
 ![ Karel Čapek and "Růženka" ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/capek_rur.jpg)
-*Image note: Poster of "Růženka" premiered in 1920; Karel Čapek coined the term "Robot"*
+*Image note: The poster for "Růženka" premiered in 1920, created by Karel Čapek. He coined the term "Robot".*
 
 From then on, the term "Robot" quickly spread around the world and became a general term for all types of machines. The name of the discipline "robotics" was first proposed by the science fiction master Isaac Asimov in 1942.
 
@@ -39,51 +39,51 @@ From then on, the term "Robot" quickly spread around the world and became a gene
 
 ## 2. Development Stages
 
-### 2.1 Three Waves—How Robot Technology Has Achieved Today's State
+### 2.1 Three Waves—How Robot Technology Has Achieved Its Current State
 
-Looking back at the development of robot technology, three important stages can be clearly identified. Each technological breakthrough is accompanied by explosive industrial growth.
+Looking back at the development of robotics technology, three important stages can be clearly identified. Each technological breakthrough was accompanied by explosive industrial growth.
 
 **First Generation: Teaching-Replication Robots (1960s-1970s)**
 
-1961 was a year that went down in industrial history. General Motors in the United States installed the world’s first industrial robot—**Unimate**—at its New Jersey plant. This massive machine, invented by engineer Joseph Engelberger, weighed two tons and was powered by hydraulics, enabling precise welding operations. Prior to this, car welding relied entirely on workers holding welding torches, which was inefficient and harmful to workers' health. The introduction of Unimate marked the official entry of robots into industrial production.
+1961 was a year that went down in industrial history. General Motors in the United States installed the world’s first industrial robot—**Unimate**—at its New Jersey factory. This massive machine, invented by engineer Joseph Engelberger and weighing two tons, was powered by hydraulics and could perform welding tasks with precision. Prior to this, car welding relied entirely on workers holding welding torches, which was inefficient and caused serious health problems for the workers. The emergence of Unimate marked the official entry of robots into industrial production.
 
 ![Unimate Industrial Robot ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/unimate.png)
-*Image caption: The world's first industrial robot, Unimate, installed at General Motors factory in 1961*
+*Figure caption: The world's first industrial robot, Unimate, installed at General Motors factory in 1961*
 
 The core feature of this generation of robots is "teaching and reproduction" – workers must manually manipulate the robot to complete a task first, after which the robot remembers the entire trajectory and can repeat the action infinitely. While this approach marks the beginning of industrial automation, its drawbacks are also evident: it cannot handle complex and variable environments, and once the product model changes, re-teaching is required.
 
 ![ First-generation industrial robot ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/industrial.jpg)
-*Figure caption: Modern industrial robots are widely used in fields such as automotive manufacturing and electronics assembly*
+*Figure note: Modern industrial robots are widely used in fields such as automotive manufacturing and electronics assembly*
 
 
 **Second Generation: Perceiving Robots (1980s-1990s)**
 
-In the 1980s, with the advancement of sensor technology, robots began to have the ability to "perceive" the world. These robots were equipped with force sensors, touch sensors, and even vision sensors, allowing them to adjust their behavior according to environmental changes.
+In the 1980s, with the advancement of sensor technology, robots began to have the ability to "perceive" the world. This generation of robots were equipped with force sensors, touch sensors, and even vision sensors, allowing them to adjust their behavior according to environmental changes.
 
 During this period, Japan became the world's largest industrial robot manufacturer. Japanese companies such as Fanuc, Yaskawa, and Panasonic rapidly emerged as giants in the field of industrial robots. In 1980, this year is thus referred to in the industry as "the Year of Robots".
 
-**Third Generation: Intelligent Robots (2000s–present)**
+**Third Generation: Intelligent Robots (2000s-present)**
 
-In the 21st century, breakthroughs in artificial intelligence technology have made robots truly "intelligent". In 2000, Honda in Japan demonstrated the **ASIMO** robot, which could walk, run, and climb stairs like a human. It was one of the world's first humanoid robots with bipedal movement capabilities. In 2013, the **Atlas** bipedal robot from Boston Dynamics was first publicly presented; it could perform complex movements such as jumping, rolling, and back flips, expanding people's understanding of robot mobility.
+In the 21st century, breakthroughs in artificial intelligence technology have made robots truly "smart." In 2000, Honda in Japan demonstrated the **ASIMO** robot, which could walk, run, and climb stairs like a human. It was one of the world's first humanoid robots with bipedal movement capabilities. In 2013, the **Atlas** bipedal robot from Boston Dynamics was unveiled for the first time. It could perform complex movements such as jumping, rolling, and backflips, expanding people's understanding of robot mobility.
 
 ![Atlas intelligent robot ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/atlas.png)
-*Figure caption: Boston Dynamics' Atlas is a representative intelligent robot that can perform complex movements*
+*Figure caption: Boston Dynamics' Atlas is a representative intelligent robot capable of performing complex movements*
 
 ### 2.2 The Rise of Chinese Humanoid Robots
 
 In recent years, China has made significant progress in humanoid robotics, and a number of enterprises and technological achievements with international competitiveness have emerged.
 
-**Unitree** is a leading Chinese bipedal robot company. Its Unitree H1 is one of the most advanced humanoid robots in China at present. The H1 is approximately 1.8 meters tall and weighs 47 kg, with a maximum running speed of 3.3 m/s, setting a new record for similar products. Unitree uses a self-developed motor drive system to achieve high-performance motion control.
+**Unitree Technology** is a leading Chinese bipedal robot company. Its Unitree H1 is one of the most advanced humanoid robots in China at present. The H1 is approximately 1.8 meters tall and weighs 47 kg. Its maximum running speed can reach 3.3 m/s, breaking the records of similar products. Unitree Technology uses a self-developed motor drive system to achieve high-performance motion control.
 
 ![ Unitree H1 by Unitree Technology ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/unitree.jpeg)
 *Image caption: Unitree H1 humanoid robot by Unitree Technology*
 
-**AGIBOT** was established in 2023 by a former senior executive at Huawei. It focuses on the research and development of general humanoid robots. AGIBOT aims to create highly intelligent humanoid robot platforms, which can be applied in industrial manufacturing, commercial services, and home environments.
+**AGIBOT Robot** was established in 2023 by a former Huawei executive. It focuses on the research and development of general humanoid robots. AGIBOT aims to create highly intelligent humanoid robot platforms, which can be applied in industrial manufacturing, commercial services, and home environments.
 
-![ AiE Robot AGIBOT](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/agibot.png)
-*Image caption: AiE Robot universal humanoid robot*
+![ Zhiyuan Robot AGIBOT](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/agibot.png)
+*Figure caption: Zhiyuan Robot general-purpose humanoid robot*
 
-**LimX Dynamics** is a leading Chinese foot-based robot company with extensive technical expertise in bipedal and multi-legged robots. The P series of bipedal robots released by LimX Dynamics possess stable walking and running capabilities, and show excellent adaptability to complex terrains.
+**LimX Dynamics** is a leading Chinese foot-based robot company with extensive technical expertise in bipedal and multi-legged robots. The P series bipedal robots released by LimX Dynamics possess stable walking and running capabilities, and show excellent adaptability to complex terrains.
 
 ![Per-unit Power LimX Dynamics](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/limx.jpg)
 *Figure caption: Per-unit power bipedal robot*
@@ -91,11 +91,11 @@ In recent years, China has made significant progress in humanoid robotics, and a
 **Comparison of domestic robots and Atlas**:
 
 | Dimension | Boston Dynamics Atlas | Chinese humanoid robot |
-|------|-----------------|-----------------|
+|------|-----------------|-------------------------|
 | Driving method | Hydraulic drive | Motor drive |
 | Movement capabilities | Parkour, backflip | Walking, running |
-| Cost | Million-level | Hundred-thousand-level |
-| Application scenarios | Primarily research | Commercial exploration |
+| Cost | Millions | Hundreds of thousands |
+| Application scenarios | Primarily for research | Commercial exploration |
 | Industry chain | United States | China manufacturing |
 
 Overall, Chinese humanoid robots have advantages in **commercialization and cost control**.
@@ -106,17 +106,17 @@ Overall, Chinese humanoid robots have advantages in **commercialization and cost
 
 ### 3.1 Which industries have been changed by robots?
 
-The value of robotics ultimately lies in its ability to solve practical problems and create economic value. Today, robots have permeated almost every corner of nearly all industries.
+The value of robotics lies in its ability to solve practical problems and create economic benefits. Today, robots have permeated almost every corner of nearly all industries.
 
-**Industrial Manufacturing—Revolutionary Changes in the Automotive Industry**
+**Industrial Manufacturing——A Revolutionary Change in the Automotive Industry**
 
-When it comes to the most mature field for robot applications, industrial manufacturing is undoubtedly the leader. Automotive manufacturing is the largest market for industrial robots. In the production of a regular car, hundreds of different types of industrial robots are required, including welding robots, spraying robots, assembly robots, and handling robots.
+When it comes to the most mature field for robot applications, industrial manufacturing is undoubtedly the leader. Automotive manufacturing is the largest market for industrial robots. In the production of a typical car, hundreds of different types of industrial robots are required, including welding robots, spraying robots, assembly robots, and handling robots.
 
-Taking welding as an example, traditional manual welding requires workers to maintain the same posture for a long time. This not only involves high labor intensity but also makes it difficult to ensure the quality of the weld. In modern automobile factories, almost all welding tasks are performed by robots. The welds are uniform and beautiful, and production efficiency is several times higher than that of manual work.
+Take welding as an example. Traditional manual welding requires workers to maintain the same posture for a long time. This not only involves high labor intensity but also makes it difficult to ensure welding quality. In modern automobile factories, almost all welding tasks are performed by robots. The welds are uniform and beautiful, and production efficiency is several times that of manual welding.
 
 **Logistics and Warehousing—The Hidden Hero in the E-commerce Era**
 
-When you shop online, you may never think about how the packages are sorted and loaded quickly and accurately. In Amazon's warehouses, tens of thousands of Kiva robots (now Amazon Robotics) move around on the ground, carrying shelves and transporting goods to the sorters. This "goods-to-person" system has increased warehouse sorting efficiency by more than 5 times.
+When you shop online, you probably never think about how the packages are sorted and loaded quickly and accurately. In Amazon's warehouses, tens of thousands of Kiva robots (now Amazon Robotics) move around on the ground, carrying shelves to transport goods to the sorters. This "goods-to-person" system has increased warehouse sorting efficiency by more than 5 times.
 
 ![ Logistics Warehouse Robot ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/logistics.jpg)
 *Image caption: Kiva robots in Amazon warehouses significantly improve logistics efficiency*
@@ -138,12 +138,12 @@ In operating rooms, the Da Vinci Surgical System has become a powerful assistant
 
 At this current time, we can clearly see that robotics technology is evolving in several important directions.
 
-![ Trends in Robotics Technology](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/robot_trends.jpg)
-*Figure note: Four major trends in robotics technology: intelligence, collaboration, platformization, and autonomy*
+![ Robotics Technology Development Trends ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/robot_trends.jpg)
+*Figure note: Four major development trends in robotics technology: intelligence, collaboration, platformization, and autonomy*
 
 **Trend 1: Intelligence—From "Automation" to "Autonomy"**
 
-Traditional robots require humans to pre-set all actions, while the next generation of intelligent robots can "think" on their own. With the development of artificial intelligence technologies such as deep learning and reinforcement learning, robots begin to possess the ability for autonomous learning and reasoning decision-making.
+Traditional robots require humans to pre-set all actions, while the next generation of intelligent robots can "think" on their own. With the development of artificial intelligence technologies such as deep learning and reinforcement learning, robots begin to possess the abilities of autonomous learning and reasoning decision-making.
 
 **Trend Two: Collaboration—People and Machines Dancing Together**
 
@@ -151,7 +151,7 @@ Traditional industrial robots need to be installed within safety fences, as they
 
 **Trend Three: Platformization — Reducing Development Barriers**
 
-The emergence of the open-source robot operating system ROS (Robot Operating System) represents a revolution in the field of robot software. It provides a standardized communication framework and tool library, allowing developers to focus on core algorithms rather than low-level hardware drivers.
+The emergence of the open-source robot operating system ROS (Robot Operating System) represents a revolution in the field of robot software. It provides a standardized communication framework and toolset, allowing developers to focus on core algorithms rather than low-level hardware drivers.
 
 ![ROS System Architecture Diagram ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/ros_architecture.jpg)
 *Figure Note: ROS adopts a distributed node architecture and communicates through topics, services, and actions*
@@ -160,7 +160,7 @@ The emergence of the open-source robot operating system ROS (Robot Operating Sys
 
 ## 5. Embodied AI
 
-### 5.1 Why Embodied AI Is the Next Frontier in AI?
+### 5.1 Why embodied AI is the next frontier in AI?
 
 If you follow the latest developments in the field of artificial intelligence, you must have heard of the term "embodied AI". Why is it so important?
 
@@ -168,7 +168,7 @@ If you follow the latest developments in the field of artificial intelligence, y
 
 Traditional artificial intelligence—such as the voice assistant in your phone or ChatGPT—primarily processes **symbolic data**: text, images, and sounds. These AI systems have no "body" and cannot interact directly with the physical world.
 
-Embodied AI emphasizes that AI needs to be "embodied" – having a physical entity (robots, drones, smart devices, etc.), perceiving the world through sensors, and changing the world through actuators. It learns and evolves through interactions with its environment.
+Embodied AI emphasizes that AI needs to be "embodied" – having a physical entity (robots, drones, smart devices, etc.). It perceives the world through sensors and changes the world through actuators, learning and evolving through interactions with the environment.
 
 **Why is embodied AI important?**
 
@@ -176,22 +176,22 @@ Professor Li Feifei, a renowned AI researcher, once proposed: "The next major ad
 
 This is because all of human intelligence—language, reasoning, and learning—is closely related to our physical experiences. We know what "heat" is because we have been burned; we know what "weight" is because we have carried heavy objects. A pure language model can write beautiful sentences about "pain," but it has never truly felt pain.
 
-For embodied AI to enable AI to truly understand the physical world, it is necessary to give them a body and an experience.
+For embodied AI to truly understand the physical world, it is necessary to provide them with a body and experience.
 
 ![ Overview of Embodied AI Technology](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/embodied_overview.jpg)
-*Figure note: Core technologies of embodied AI include LLM, VLM, VLA, reinforcement learning, and imitation learning. Representative projects include PaLM-E, RT-2, GR00T, etc.*
+*Figure note: The core technologies of embodied AI include LLM, VLM, VLA, reinforcement learning, and imitation learning. Representative projects include PaLM-E, RT-2, GR00T, etc.*
 
 ### 5.2 Applications of Large Language Models in Robots
 
-The emergence of Large Language Models (LLMs) has brought a revolutionary breakthrough in enabling robots to understand natural language instructions. Traditional robot control systems need to precisely convert human commands into low-level action commands, a process that often requires tedious programming by professional engineers. In contrast, LLMs can understand vague and complex natural language descriptions and transform them into executable action sequences, significantly reducing the barrier to human-robot interaction.
+The emergence of Large Language Models (LLMs) has brought a revolutionary breakthrough in enabling robots to understand natural language instructions. Traditional robot control systems need to precisely convert human commands into low-level action commands, a process that often requires professional engineers to perform complex programming designs. In contrast, LLMs can understand vague and complex natural language descriptions and transform them into executable action sequences, significantly reducing the barrier to human-robot interaction.
 
-The **PaLM-E** model released by Google in 2023 is a milestone in this field. This model integrates the PaLM large language model with a robotic visual perception system, enabling it to directly understand complex commands such as "take the chip from the drawer and put it into the box," and autonomously plan a complete sequence of actions to fulfill the command (Dadkhahi et al., 2023). PaLM-E demonstrates the great potential of LLMs in robotic task planning.
+The **PaLM-E** model released by Google in 2023 is a milestone achievement in this field. This model integrates the PaLM large language model with a robotic visual perception system, enabling it to directly understand complex instructions such as "take the chip from the drawer and put it into the box," and autonomously plan a complete sequence of actions to fulfill the instruction (Dadkhahi et al., 2023). PaLM-E demonstrates the great potential of LLMs in robotic task planning.
 
 **SayCan**（Ahn et al., 2022） adopted a more practical approach, combining LLMs as the "brain" with a learnable skill library. The LLMs are responsible for understanding tasks and selecting appropriate skills, while each skill is executed by sub-policies trained through reinforcement learning. This modular architecture retains the flexibility of language understanding while ensuring the reliability of action execution.
 
-**Code as Policies** (Liang et al., 2023) goes a step further by proposing to use code as a universal representation for robots. LLMs can directly generate Python code to control robots, which can call perception APIs, actuator control functions, and even include feedback loops to achieve complex behaviors.
+**Code as Policies** (Liang et al., 2023) goes a step further by proposing to use code as a universal representation for robots. LLMs can directly generate Python code to control robots, which can invoke perception APIs, actuator control functions, and even include feedback loops to achieve complex behaviors.
 
-![PaLM-E Robot Demonstration ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/palm_e_fig1.jpg)
+![PaLM-E Robot Demonstration](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/palm_e_fig1.jpg)
 *Figure caption: The PaLM-E model understands natural language instructions and controls the robot to perform tasks*
 
 ### 5.3 Application of Vision-language Model in Robots
@@ -200,21 +200,21 @@ If large language models endow robots with the ability to "understand language,"
 
 **RT-2** (Robotics Transformer 2) is a significant work released by DeepMind in 2023. It is the first robot manipulation model capable of directly learning generalization abilities from visual-language data on the scale of the internet (Brohan et al., 2023). RT-2 encodes both visual inputs and language instructions, and directly outputs robot actions through the Transformer architecture.
 
-**OK-Robot**（Liu et al., 2024) focuses on grasping open-word objects. This work proposes a simple and efficient framework that enables grasping any object in an unseen environment.
+**OK-Robot**（Liu et al., 2024) focuses on grasping open vocabulary objects. This work proposes a simple and effective framework that enables grasping any object in an unseen environment.
 
-**Manipulate Anything** (Song et al., 2024) explores how robots can generalize manipulation skills using a vision-language model without human demonstration.
+**Manipulate Anything** (Song et al., 2024) explores how robots can generalize manipulation skills through a vision-language model without human demonstration.
 
 ![VLM Robot Manipulation Demo](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/rt2_demo.jpg)
 *Figure caption: The vision-language model enables the robot to generalize manipulation skills to new objects and scenarios*
 
-![RT-2 Robot Demonstration ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/rt2_fig1.jpg)
-*Figure note: RT-2 can understand semantic commands, such as "put the snacks in the hands of the nearest person"*
+![RT-2 Robot Demonstration](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/rt2_fig1.jpg)
+*Figure caption: RT-2 can understand semantic commands, such as "put the snacks in the hands of the nearest person"*
 
 ### 5.4 Vision-language-action model
 
 Vision-language-action model (Vision-Language-Action Model, abbreviated as VLA) is one of the most cutting-edge research directions in the field of embodied AI. Unlike VLM, VLA directly establishes a mapping from visual observations to action outputs, enabling end-to-end learning and reasoning.
 
-Based on RT-1, **RT-2** further introduces pre-training of visual language on the scale of the internet, enabling the model to perform reasoning and generalization (Brohan et al., 2023). RT-2 can carry out semantic reasoning tasks such as "give snacks to the nearest person," demonstrating the potential of VLA in understanding abstract concepts.
+Based on RT-1, **RT-2** further introduces pre-training of visual language on an internet-scale scale, enabling the model to perform reasoning and generalization (Brohan et al., 2023). RT-2 can carry out semantic reasoning tasks such as "give snacks to the person closest to you," demonstrating the potential of VLA in understanding abstract concepts.
 
 The core advantage of VLA lies in its "end-to-end" nature: the entire process from perception to decision-making and execution is carried out within a unified neural network. This not only simplifies the system architecture, but more importantly, achieves global optimization.
 
@@ -223,7 +223,7 @@ The core advantage of VLA lies in its "end-to-end" nature: the entire process fr
 
 ### 5.5 Application of Reinforcement Learning in Robot Control
 
-Reinforcement Learning (RL) is a method that enables robots to learn optimal policies through interaction with the environment and self-experimentation. Unlike traditional rule-based programming, reinforcement learning allows robots to autonomously discover effective behavior patterns in unknown environments.
+Reinforcement Learning (RL) is a method that enables robots to learn optimal policies by interacting with the environment and trial-and-error. Unlike traditional rule-based programming, reinforcement learning allows robots to autonomously discover effective behavior patterns in unknown environments.
 
 In 2013, DeepMind demonstrated that Deep Q-Network (DQN) could learn to play Atari games (Mnih et al., 2013). This breakthrough proved the potential of reinforcement learning for processing high-dimensional sensory inputs.
 
@@ -236,41 +236,41 @@ The core challenge of reinforcement learning lies in **sample efficiency**—rob
 
 ### 5.6 Application of Imitation Learning in Robot Skill Acquisition
 
-Imitation learning is a method that enables robots to learn skills from human demonstrations. Compared to reinforcement learning, imitation learning is more intuitive—the human directly shows how to complete tasks, and the robot learns to perform the same actions through observation.
+Imitation learning is a method for robots to learn skills from human demonstrations. Compared to reinforcement learning, imitation learning is more intuitive—humans directly show how to complete tasks, and robots learn to perform the same actions by observing.
 
-**Behavior cloning (BC)** is the most basic imitation learning method. The robot uses direct supervised learning to learn the mapping from state to action from demonstration data.
+**Behavior cloning (BC)** is the most basic imitation learning method. It is a direct supervised learning approach where the robot learns the mapping from state to action from demonstration data.
 
 To address the distribution shift problem, **DAgger** (Ross et al., 2011) proposed an iterative training method. This method allows the robot to continuously collect human correction data during execution, and then retrain the policy using this data.
 
 The **ALOHA** framework by Stanford University (Zhao et al., 2024) has pushed imitation learning to a new level. ALOHA uses low-cost wearable devices to record high-precision demonstration data of human manipulation, and then uses behavior cloning to train robots to perform the same tasks.
 
-![ALOHA robotic arm demonstration](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/aloha_fig1.jpg)
-*Figure note: ALOHA trains the robot to master precise manipulation skills through human demonstration data*
+![ALOHA robotic arm demonstration ](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/aloha_fig1.jpg)
+*Figure caption: ALOHA trains the robot to perform precise manipulation skills through human demonstration data*
 
 ### 5.7 Spatial Intelligence and 3D Understanding
 
 Spatial intelligence refers to a robot's ability to understand 3D spatial relationships. It is one of the key technologies for achieving general embodied AI.
 
-**PointNet** (Qi et al., 2017) is a milestone work in 3D deep learning. It can directly process point cloud data to achieve the classification and segmentation of 3D objects.
+**PointNet**（Qi et al., 2017) is a milestone work in 3D deep learning. It can directly process point cloud data to achieve the classification and segmentation of 3D objects.
 
-**NVIDIA GR00T** is a general robot base model released in 2024. It aims to enable robots to understand 3D space and perform complex tasks.
+**NVIDIA GR00T** is a general-purpose robot base model released in 2024, designed to enable robots to understand 3D space and perform complex tasks.
 
 ![NVIDIA GR00T demo](../../../01-具身智能概述/module1_1_机器人发展历史与背景/images/gr00t_demo.jpg)
 *Figure caption: NVIDIA GR00T is a general-purpose robot base model that supports various robot tasks*
 
 #### Li Feifei and Yang Likun's Perspectives on Spatial Intelligence
 
-**Fei-Fei Li** is a professor at Stanford University and director of the Stanford AI Lab. In recent years, she has actively promoted the concept of "Spatial Intelligence." In 2024, Fei-Fei Li emphasized on multiple occasions that true intelligence goes beyond language comprehension; it is more important to understand 3D spaces. Her team is researching how to enable AI systems to understand spatial relationships and perform physical reasoning like humans do. Fei-Fei Li believes that "seeing" is the foundation of intelligence, and visual understanding is a key path to general intelligence. Her research covers areas such as 3D scene understanding, neural rendering, and embodied AI.
+**Fei-Fei Li** is a professor at Stanford University and director of the Stanford AI Lab. In recent years, she has actively promoted the concept of "Spatial Intelligence." In 2024, Fei-Fei Li emphasized on multiple occasions that true intelligence goes beyond language comprehension; more importantly, it involves understanding 3D spaces. Her team is working on how to enable AI systems to understand spatial relationships and perform physical reasoning like humans do. Fei-Fei Li believes that "seeing" is the foundation of intelligence, and visual comprehension is a key path to general intelligence. Her research covers areas such as 3D scene understanding, neural rendering, and embodied AI.
 
-**Yann LeCun** is a Turing Award winner and former AI chief scientist at Meta. In 2025, Yann LeCun founded the new company Advanced Machine Intelligence (AMI) and raised over $1 billion to develop world models. Unlike current large language models, Yann LeCun believes that true AI needs to understand the physical world and possess common sense and reasoning abilities. The JEPA (Joint Embedding Prediction Architecture) he proposed is a key path to achieving this goal. Yann LeCun has repeatedly stated: "Existing LLMs cannot achieve general artificial intelligence. We need AI systems that can understand and predict the physical world."
+**Yann LeCun** is a Turing Award winner and former AI chief scientist at Meta. In 2025, Yann LeCun founded the company Advanced Machine Intelligence (AMI) and raised over $1 billion to develop world models. Unlike current large language models, Yann LeCun believes that true AI needs to understand the physical world and possess common sense and reasoning abilities. The JEPA (Joint Embedding Prediction Architecture) he proposed is a key path to achieving this goal. Yann LeCun has repeatedly stated: “Existing LLMs cannot achieve general artificial intelligence; we need AI systems that can understand and predict the physical world.”
 
-**Common ground between them**: Despite different approaches, Li Feifei and Yang Likun both believe that **spatial understanding** is crucial for achieving more advanced AI. Li Feifei focuses on visual perspectives, while Yang Likun focuses on world model perspectives. Together, they drive the development of embodied AI.
+**Common ground between them**: Despite different approaches, Li Feifei and Yang Likun both believe that **spatial understanding** is crucial for achieving more advanced AI. Li Feifei focuses on the visual perspective, while Yang Likun focuses on the world model. Together, they drive the development of embodied AI.
 
 ---
 
 ## Summary of This Chapter
 
-In this chapter, we reviewed the development history of robotics. From ancient automatic machines to fictional "artificial workers" in science fiction, and finally to intelligent robots that can walk independently and cooperate with humans today, humanity's imagination and pursuit of robots have never stopped.
+In this chapter, we reviewed the development history of robot technology. From ancient automatic machines to fictional "artificial workers" in science fiction, and finally to intelligent robots that can walk independently and cooperate with humans today, humanity's imagination and pursuit of robots have never stopped.
 
 **Key points review:**
 
@@ -284,8 +284,8 @@ In this chapter, we reviewed the development history of robotics. From ancient a
 
 ## Thinking and Practice
 
-1. **Think about it**: In your environment, where are robots already or will be used? What type of robots are they?
-2. **Research it**: Which robot company or product interests you the most? What core technologies do they use?
+1. **Think about it**: Where in your environment are robots already or will be used? What type of robots are they?
+2. **Research on it**: Which robot company or product interests you the most? What core technologies do they use?
 3. **Discuss it**: What ethical issues might the development of embodied AI bring? How should humans respond?
 
 ---
@@ -323,4 +323,4 @@ In this chapter, we reviewed the development history of robotics. From ancient a
 
 ---
 
-*In the next section, we will learn "1.2 Composition and Classification of Robot Systems", to understand what components a robot consists of and the characteristics of different types of robots.*
+*In the next section, we will study "1.2 Composition and Classification of Robot Systems", to understand what components a robot consists of and the characteristics of different types of robots.*
